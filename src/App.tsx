@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ImageCard from './components/ImageCard';
 import {Image} from './Interfaces';
+import './main.css';
 
 function App() {
 
@@ -24,7 +25,9 @@ function App() {
     <div className="App">
       {!loading && images.map( image => {
         return (
-          <ImageCard key={image.id} webformatURL={image.webformatURL} tags={image.tags} />
+          <ImageCard key={image.id} id={image.id} webformatURL={image.webformatURL} tags={image.tags} 
+          views={image.views} downloads={image.downloads} favorites={image.favorites} likes={image.likes}
+          comments={image.comments} user={image.user}   />
         )
       })
      

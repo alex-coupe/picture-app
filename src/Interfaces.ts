@@ -1,5 +1,5 @@
 export interface Image {
-    id?: number;
+    id: number;
     webformatURL: string;
     tags: string;
     views?: number,
