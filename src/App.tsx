@@ -10,7 +10,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   useEffect(() => {
-    fetch(`https://pixabay.com/api/?key=16214614-d337e912e3eb61581ddb881a1&q=${searchTerm}&image_type=photo&pretty=true`)
+    fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_KEY}&q=${searchTerm}&image_type=photo&pretty=true`)
     .then( res => res.json())
     .then(data => {
       setImages(data.hits);
