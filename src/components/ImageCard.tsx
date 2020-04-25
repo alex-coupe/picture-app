@@ -1,17 +1,12 @@
 import React from 'react';
+import {Image} from '../Interfaces';
 
-interface Image {
-    
-    pageURL: string;
-    tags: string;
 
-}
-
-const ImageCard : React.FC<Image> = ({pageURL,tags}) => {
+const ImageCard : React.FC<Image> = ({webformatURL,tags}) => {
     
     return (
         <div>
-            <img src={pageURL} alt="caption" />
+            <img src={webformatURL} alt="caption" />
         </div>
     )
 }

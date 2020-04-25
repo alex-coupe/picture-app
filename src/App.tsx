@@ -1,12 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ImageCard from './components/ImageCard';
-
-interface Image {
-  id: number;
-  webformatURL: string;
-  tags: string;
-
-}
+import {Image} from './Interfaces';
 
 function App() {
 
@@ -28,9 +22,9 @@ function App() {
 
 
     <div className="App">
-      {images.map( image => {
+      {!loading && images.map( image => {
         return (
-          <ImageCard key={image.id} pageURL={image.webformatURL} tags={image.tags} />
+          <ImageCard key={image.id} webformatURL={image.webformatURL} tags={image.tags} />
         )
       })
      
