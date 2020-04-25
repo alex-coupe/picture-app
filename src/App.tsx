@@ -28,6 +28,7 @@ function App() {
           <ImageCard key={image.id} id={image.id} webformatURL={image.webformatURL} tags={image.tags} 
           views={image.views} downloads={image.downloads} favorites={image.favorites} likes={image.likes}
           comments={image.comments} user={image.user}   />
+         
         )
       })
      
