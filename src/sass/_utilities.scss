@@ -5,3 +5,103 @@ $numbers: (1,2,3,4,5);
         margin: #{$number}rem;
     }
 }
+
+@each $number in $numbers {
+    .mr-#{$number} {
+        margin-right: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .ml-#{$number} {
+        margin-left: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .mt-#{$number} {
+        margin-top: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .mb-#{$number} {
+        margin-bottom: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .my-#{$number} {
+        margin: 0 #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .mx-#{$number} {
+        margin: #{$number}rem 0;
+    }
+}
+
+.mx-auto{
+    margin: auto 0px;
+}
+
+.my-auto{
+    margin: 0 auto;
+}
+
+
+@each $number in $numbers {
+    .p-#{$number} {
+        padding: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .pr-#{$number} {
+        padding-right: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .pl-#{$number} {
+        padding-left: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .pt-#{$number} {
+        padding-top: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .pb-#{$number} {
+        padding-bottom: #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .py-#{$number} {
+        padding: 0 #{$number}rem;
+    }
+}
+
+@each $number in $numbers {
+    .px-#{$number} {
+        padding: #{$number}rem 0;
+    }
+}
+
+.px-auto{
+    padding: auto 0px;
+}
+
+.py-auto{
+    padding: 0 auto;
+}
+
+.container {
+    width: 950px;
+	margin: auto;  
+}

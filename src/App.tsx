@@ -22,7 +22,7 @@ function App() {
   return (
 
 
-    <div className="App">
+    <div className="App container">
       {!loading && images.map( image => {
         return (
           <ImageCard key={image.id} id={image.id} webformatURL={image.webformatURL} tags={image.tags} 
