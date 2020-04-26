@@ -1,14 +1,19 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 @import 'utilities';
+@import 'text';
+@import 'form';
 $font: 'Raleway', sans-serif;
 
-*{
-    padding: 0;
-    margin: 0;
-}
+
 
 body {
     font-family: $font;
+    background-color: gray;
 }
 
 .card img {
@@ -22,6 +27,8 @@ body {
     transition: 0.3s;
     overflow: hidden;
     margin-bottom: 2em;
+    max-width: 30em;
+    background-color: white;
   }
   
  
@@ -45,3 +52,5 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+

@@ -25,17 +25,21 @@ function App() {
 
 
     <div className="App container">
-       <Search updateTerm={setSearchTerm} />
-      {!loading ? images.map( image => {
-        return (
-          <ImageCard key={image.id} id={image.id} webformatURL={image.webformatURL} tags={image.tags} 
-          views={image.views} downloads={image.downloads} favorites={image.favorites} likes={image.likes}
-          comments={image.comments} user={image.user}   />
-         
-        )
-      })
-     
-      : <Spinner />}
+      <div className="row text-center">
+          <Search updateTerm={setSearchTerm} />
+    
+            <div className="column">
+              {!loading ? images.map( image => {
+                return (
+                  <ImageCard key={image.id} id={image.id} webformatURL={image.webformatURL} tags={image.tags} 
+                  views={image.views} downloads={image.downloads} favorites={image.favorites} likes={image.likes}
+                  comments={image.comments} user={image.user}   />
+                
+                )
+              }) : <Spinner />}
+            </div>
+          
+        </div>
     </div>
   );
 }

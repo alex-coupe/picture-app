@@ -9,9 +9,9 @@ const ImageCard : React.FC<Image> = ({webformatURL,tags, user, likes, comments, 
 
     return (
         <div className="card">
-            <img src={webformatURL} alt="caption" className="" />
+            <img src={webformatURL} alt="caption" className="column-image" />
             <div className="m-3">
-                <span className="mr-2"><FontAwesomeIcon size="2x" icon={faCamera} /> {user}</span>
+                <span className="mr-2 text-primary"><FontAwesomeIcon size="2x" icon={faCamera} /> {user}</span>
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faDownload} /> {downloads}</span>
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faBinoculars} /> {views}</span>
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faHeart} /> {likes}</span>
