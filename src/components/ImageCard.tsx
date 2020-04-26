@@ -17,9 +17,9 @@ const ImageCard : React.FC<Image> = ({webformatURL,tags, user, likes, comments, 
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faHeart} /> {likes}</span>
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faComments} /> {comments}</span>
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faStar} /> {favorites}</span>
-                {splitTags.map( tag => {
+                {splitTags.map( (tag, index) => {
                     return (
-                        <span className="badge">{tag}</span>
+                        <span className="badge" key={index}>{tag}</span>
                     )
                 })}
             </div>

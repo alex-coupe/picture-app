@@ -28,3 +28,20 @@ body {
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   }
+
+  .badge {
+      padding: 3px;
+      background-color: grey;
+      border-radius: 25px;
+      margin: 5px ;
+      color: white;
+  }
+
+  .spinner {
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
