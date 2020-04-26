@@ -1,3 +1,4 @@
+
 export interface Image {
     id: number;
     webformatURL: string;
@@ -8,5 +9,8 @@ export interface Image {
     likes:number,
     comments:number,
     user:string,
+}
 
+export interface SearchType {
+    updateTerm: (e:string) => void
 }

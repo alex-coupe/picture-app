@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ImageCard from './components/ImageCard';
 import {Image} from './Interfaces';
 import './main.css';
+import Search from './components/Search';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
 
 
     <div className="App container">
+       <Search updateTerm={setSearchTerm} />
       {!loading && images.map( image => {
         return (
           <ImageCard key={image.id} id={image.id} webformatURL={image.webformatURL} tags={image.tags} 
