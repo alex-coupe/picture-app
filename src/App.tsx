@@ -25,10 +25,9 @@ function App() {
 
 
     <div className="App container">
-      <div className="row text-center">
+      <div className="text-center">
           <Search updateTerm={setSearchTerm} />
-    
-            <div className="column">
+            <div className="row">
               {!loading ? images.map( image => {
                 return (
                   <ImageCard key={image.id} id={image.id} webformatURL={image.webformatURL} tags={image.tags} 
@@ -38,7 +37,6 @@ function App() {
                 )
               }) : <Spinner />}
             </div>
-          
         </div>
     </div>
   );
