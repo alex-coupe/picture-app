@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ImageCard : React.FC<Image> = ({webformatURL,tags, user, likes, comments, favorites, downloads, views}) => {
     
+    const splitTags:string[] = tags.split(',');
+
     return (
         <div className="card">
             <img src={webformatURL} alt="caption" className="" />
@@ -15,6 +17,11 @@ const ImageCard : React.FC<Image> = ({webformatURL,tags, user, likes, comments, 
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faHeart} /> {likes}</span>
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faComments} /> {comments}</span>
                 <span className="mr-2"><FontAwesomeIcon size="2x" icon={faStar} /> {favorites}</span>
+                {splitTags.map( tag => {
+                    return (
+                        <span className="badge">{tag}</span>
+                    )
+                })}
             </div>
         </div>
     )
